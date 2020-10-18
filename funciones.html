@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Funciones</title>
+	<script type="text/javascript">
+		//se crea array
+		var num = new Array();
+		document.write("Valores ingresados<br>");
+		//se ingresa valores en prompt mediante un bucle...	
+		for(i = 0; i < 10; i++) {
+			num[i] = parseInt(prompt('Ingresa digitos por favor'));
+			//imprimimos los numeros tal cual se ingresaron
+			document.write(num[i]+"<br>");
+		}
+        
+        //algoritmo de burbuja
+        function burbuja(num){
+		    for(var i=1;i<num.length;i++){
+			    for(var j=0;j<(num.length-i);j++){
+				    if(num[j]>num[j+1]){
+					    k=num[j+1];
+					    num[j+1]=num[j];
+					    num[j]=k;
+				    }
+			    }
+		    }
+		return num;
+	    }
+	    
+	    num=burbuja(num);
+            //document.write("Valores ordenados <br>");-->imprimidas en hoj html
+	    for(i=0;i<num.length;i++)
+	    {
+		    //document.write(num[i]+"<br>")-->imprimida en hoj html;
+	    }
+	    //imprime los numeros acendentes mediante sout...
+	    document.write(num.sout(num));
+        //imprime los numeros decendentemente mediante reverse...
+	    num.reverse(num);
+	    document.write(num.reverse(num));
+
+	</script>
+	<style>
+		.btn{
+	    	color:blue;
+	    }
+	    .bot{
+	    	color:orange;
+	    }
+
+	</style>
+</head>
+<body>
+	<p>Buenos dias...sus datos ingresados se muestran en la parte superior </br>mientras que en la parte inferior encontrara dos resultados...elija el de su agrado por favor...</p>
+	
+     
+     
+     <p>numeros acendentes <button class="btn" onclick="document.write('Numeros acendentes = '+num)">click</button></p>
+
+	<p>numeros decendentes <button class="bot" onclick="document.write('Numeros Decendentes = '+num.reverse(num));">click</button> </p>
+	
+</body>
+</html>
